@@ -17,11 +17,7 @@ margin-right: 30px;
 .a_footer {
 display: block;
 }
-@media screen and (max-width: 600px) {
-  #chto_ne_pozavivat {
-    visibility: hidden;
-    display: none;
-  }
+
 }
 h1 {
 text-align: center;
@@ -66,6 +62,17 @@ p {
 <body>
 <main>
 <article>
+  <script type="text/javascript"> 
+    var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));  
+    if (mobile) { 
+        alert("Мобильное устройство!!");
+        $('.navWrap').css('display', 'none'); // или можно $('.navWrap').hide();
+    } 
+    else 
+    { 
+       alert("НЕ мобильное устройство!"); 
+    }
+</script> 
 <header>
     
     <h4><p align="right"><font face="Arial" size="4">Бакалавриат, код направления 10.03.01</font></p></h4>
